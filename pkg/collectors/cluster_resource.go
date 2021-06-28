@@ -117,8 +117,8 @@ func getClusterResourceMetrics(c context.Context, apiserver string, kubeconfig s
 
 	//cluster info metric
 	info := metric.Metric{
-		LabelKeys:   []string{"kind", "console", "version"},
-		LabelValues: []string{os.Getenv("KIND"), os.Getenv("CONSOLE"), os.Getenv("VERSION")},
+		LabelKeys:   []string{"kind", "console", "version", "creator"},
+		LabelValues: []string{os.Getenv("KIND"), os.Getenv("CONSOLE"), os.Getenv("VERSION"), os.Getenv("CREATOR")},
 		Value:       1,
 	}
 
